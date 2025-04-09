@@ -1,3 +1,4 @@
+import argparse
 import geopandas as gpd
 import laspy
 import numpy as np
@@ -5,12 +6,11 @@ from scipy.interpolate import RegularGridInterpolator
 from scipy.interpolate import griddata
 from shapely.geometry import Point
 import pandas as pd
-from scipy.spatial.distance import pdist, squareform
 import alphashape
 from scipy.spatial import Delaunay
 
 def extract_alpha_shape(polygon_points, alpha):
-    points_2d = [(p[0], p[1]) for p in polygon_points]  # Bierzemy tylko X i Y
+    points_2d = [(p[0], p[1]) for p in polygon_points]
     alpha_shape = alphashape.alphashape(points_2d, alpha)
 
     return alpha_shape

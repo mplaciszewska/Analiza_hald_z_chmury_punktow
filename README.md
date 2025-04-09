@@ -39,5 +39,5 @@ pip install geopandas laspy numpy scipy shapely pandas alphashape
 
 2. Uruchomienie skryptu
 ```bash
-python zadanie.py
+python zadanie.py --geojson <sciezka do pliku geojson> --las <sciezka do pliku las>
 ``` 
